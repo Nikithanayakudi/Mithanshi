@@ -21,6 +21,7 @@ public class DeadlockApplication implements SampleApplication {
             this.lock1 = lock1;
             this.lock2 = lock2;
         }
+
 		#Team102 changed by Devops Nishu
 		 public void start() {
         Collection<Integer> primeNumbers = new LinkedList<>();
@@ -34,7 +35,16 @@ public class DeadlockApplication implements SampleApplication {
                     break;
                 }
             }
-			#End Team102
+		
+		#Team101 changes by Devops Niha
+		 private int[] createRandomArray(int length) {
+        int[] numbers = new int[length];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = random.nextInt(bound);
+        }
+        return numbers;
+    }
+     #End Team101		
 
         @Override
         public void run() {
