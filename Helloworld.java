@@ -21,6 +21,20 @@ public class DeadlockApplication implements SampleApplication {
             this.lock1 = lock1;
             this.lock2 = lock2;
         }
+		#Team102 changed by Devops Nishu
+		 public void start() {
+        Collection<Integer> primeNumbers = new LinkedList<>();
+        System.out.println("Generating Prime numbers between 1 and " + max);
+        for (int i = 1; i < max; i++) {
+            boolean isPrimeNumber = true;
+            // Check whether the number is prime
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrimeNumber = false;
+                    break;
+                }
+            }
+			#End Team102
 
         @Override
         public void run() {
